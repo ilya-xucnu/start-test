@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   web:
     build: .
@@ -6,11 +5,5 @@ services:
       - "5001:5000"
     depends_on:
       - redis
-    networks:
-      - app_network
   redis:
     image: redis:alpine
-    networks:
-      - app_network
-networks:
-  app_network:
